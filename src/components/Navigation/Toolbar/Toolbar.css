@@ -1,0 +1,16 @@
+@value primary from '../../../assets/css/colours.css';
+
+.Nav {
+    background-color: primary;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+

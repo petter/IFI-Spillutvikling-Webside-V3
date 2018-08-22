@@ -1,0 +1,21 @@
+.NavigationItem {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 2em;
+    color: white;
+    border-bottom: 1px solid transparent;
+    margin-right: .5em;
+    transition: 100ms ease-in-out;
+}
+
+.NavigationItem:link,
+.NavigationItem:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.NavigationItem:hover,
+.NavigationItem:active,
+.NavigationItem.Active {
+    border-bottom: 1px solid white;
+}
