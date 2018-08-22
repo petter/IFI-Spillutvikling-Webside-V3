@@ -1,0 +1,51 @@
+@value primary, secondary from '../../assets/css/colours.css';
+
+.Container {
+    padding: 1em 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.StyremedlemWrapper {
+    width: 900px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Styremedlem {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    margin-bottom: 2em;
+}
+
+.StyremedlemImage {
+    padding-top: 10em;
+    width: 10em;
+    background-size: 130%;
+    border-radius: 50%;
+    background-position: center center; 
+}
+
+.StyremedlemTitle {
+    color: primary;
+}
+
+.StyremedlemName {
+    margin: 0;
+}
+
+.StyremedlemRole {
+    margin: 0;
+}
+
+.StyremedlemEmail {
+    margin: 0;
+}

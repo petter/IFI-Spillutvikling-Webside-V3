@@ -1,7 +1,17 @@
+@value secondary from '../../assets/css/colours.css';
+
 @font-face {
   font-family: 'Bebas Neue';
   font-style: normal;
   font-weight: 400;
   src: local('Bebas Neue'), local('BebasNeue'),
        url('../../assets/fonts/BebasNeue-Regular.ttf') format('truetype')
+}
+
+::selection {
+  background: secondary;
+}
+
+::-moz-selection {
+  background: secondary;
 }

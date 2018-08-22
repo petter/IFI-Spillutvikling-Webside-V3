@@ -2,7 +2,6 @@
 @value navHeight from '../../assets/css/structure.css';
 
 .Jumbotron {
-    margin-top: calc(0em - navHeight);
     background-color: primary;
     height: 50em;
     color: white;
@@ -18,7 +17,9 @@
 }
 
 .JumbotronTitle {
-    font-size: 3em;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    font-size: 5em;
     margin: 0;
 }
 

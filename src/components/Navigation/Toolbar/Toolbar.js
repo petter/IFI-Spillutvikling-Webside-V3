@@ -10,6 +10,7 @@ export default class Toolbar extends Component {
 
     state = {
         isHome: window.location.pathname === '/',
+        logoOpacity: 0,
     }
 
     componentDidMount = () => {
@@ -18,18 +19,32 @@ export default class Toolbar extends Component {
             $('#toolbar').delay(300).fadeIn(1000);
         }
 
-        // Fade in logo after 
+        window.onscroll = () => {
+            // Opacity will start changing when closing bottom of jumbo.
+            const jumboBottomPos = $("#jumbotron").offset().top + $("#jumbotron").outerHeight();
+            let opacity = (window.scrollY - jumboBottomPos + 250) / 150;
+            opacity = Math.max(opacity, 0);
+            opacity = Math.min(opacity, 1);
+            this.setState({ logoOpacity: opacity });
+        }
     }
 
     render = () => {
         // Don't display toolbar on homepage, it will fade in.
-        let homeStyle = { display: "none" };
+        let navBarStyle = { display: "none" };
         if (!this.state.isHome) {
-            homeStyle = {};
+            navBarStyle = {};
         }
+
+
+        let logoStyle = { display: "none", opacity: this.state.logoOpacity };
+        if (this.state.logoOpacity > 0) {
+            logoStyle = { ...logoStyle, display: "block" };
+        }
+
         return (
-            <nav className={classes.Nav} id="toolbar" style={homeStyle}>
-                <Link to="/" style={{ display: "none" }} id="LogoLink">
+            <nav className={classes.Nav} id="toolbar" style={navBarStyle}>
+                <Link to="/" style={logoStyle} id="LogoLink">
                     <img src={logo} alt="IFI Spillutvikling logo" className={classes.NavLogo} />
                 </Link>
                 <NavigationItems />
