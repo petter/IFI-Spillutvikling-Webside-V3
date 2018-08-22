@@ -1,8 +1,10 @@
 @value primary from '../../../assets/css/colours.css';
+@value navHeight from '../../../assets/css/structure.css';
 
 .Nav {
     background-color: primary;
-    padding: 2em;
+    height: navHeight;
+    padding: 0 1em;
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -14,3 +16,12 @@
     right: 0;
 }
 
+.NavTitle {
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Bebas Neue', 'Open Sans';
+}
+
+.NavLogo {
+    height: 3em;
+}

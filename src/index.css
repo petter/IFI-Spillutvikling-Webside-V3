@@ -1,5 +1,8 @@
+@value navHeight from './assets/css/structure.css';
+
 body {
   margin: 0;
+  margin-top: navHeight;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }

@@ -5,7 +5,7 @@ import classes from './NavigationItem.css';
 
 const navigationItem = (props) => {
     return (
-        <NavLink className={classes.NavigationItem} to={props.to}>{props.children}</NavLink>
+        <NavLink className={classes.NavigationItem} activeClassName={classes.Active} to={props.to}>{props.children}</NavLink>
     );
 };
 

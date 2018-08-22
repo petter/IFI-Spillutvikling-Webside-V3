@@ -1,0 +1,22 @@
+@value primary, secondary from '../../../assets/css/colours.css';
+
+.Button {
+    padding: 1em 2em;
+    border-radius: 1em;
+    background-color: secondary;
+    color: primary;
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+}
+
+.Button:visited,
+.Button:link {
+    text-decoration: none;
+    color: primary;
+}
+
+.Button:active,
+.Button:hover {
+    padding: 1.1em 2.1em;
+    margin: -0.1em;
+}

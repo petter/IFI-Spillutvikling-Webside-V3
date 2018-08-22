@@ -1,0 +1,27 @@
+@value primary from '../../assets/css/colours.css';
+@value navHeight from '../../assets/css/structure.css';
+
+.Jumbotron {
+    margin-top: calc(0em - navHeight);
+    background-color: primary;
+    height: 50em;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 5em;
+}
+
+.JumbotronContent {
+    width: 50%;
+}
+
+.JumbotronTitle {
+    font-size: 3em;
+    margin: 0;
+}
+
+.JumbotronBody {
+    margin-bottom: 2em;
+}
