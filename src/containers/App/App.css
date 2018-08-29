@@ -1,4 +1,5 @@
 @value secondary from '../../assets/css/colours.css';
+@value navHeight from '../../assets/css/structure.css';
 
 @font-face {
   font-family: 'Bebas Neue';
@@ -6,6 +7,10 @@
   font-weight: 400;
   src: local('Bebas Neue'), local('BebasNeue'),
        url('../../assets/fonts/BebasNeue-Regular.ttf') format('truetype')
+}
+
+body {
+  margin-top: navHeight;
 }
 
 ::selection {

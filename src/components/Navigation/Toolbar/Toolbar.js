@@ -29,7 +29,7 @@ class Toolbar extends PureComponent {
             if (this.isHome()) {
                 // Opacity will start changing when closing bottom of jumbo.
                 const jumboBottomPos = $("#jumbotron").offset().top + $("#jumbotron").outerHeight();
-                let opacity = (window.scrollY - jumboBottomPos + 150) / 150;
+                let opacity = (window.scrollY - jumboBottomPos + 150 * 1.5) / 150;
                 opacity = Math.max(opacity, 0);
                 opacity = Math.min(opacity, 1);
                 this.setState({ logoOpacity: opacity });

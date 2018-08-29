@@ -17,6 +17,13 @@
     margin: 10vw 0 0 10vw;
 }
 
+._404Image {
+    height: 25vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 ._404Body {
     margin: 0 0 0 10vw;
     font-size: 3vh;

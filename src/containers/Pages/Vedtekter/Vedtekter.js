@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import Layout from '../../Layout/Layout';
+import { connect } from 'react-redux';
 
-export default class Vedtekter extends Component {
-    render() {
-        return (
-            <Layout>
-                <h1>Vedtekter</h1>
-            </Layout>
-        );
+const vedtekter = (props) => {
+    return (
+        <div>
+            <h1>Vedtekter</h1>
+        </div>
+    );
+}
+
+const mapStateToProps = state => {
+    return {
+        vedtekter: state.vedtekter,
     }
 }
+
+export default connect(mapStateToProps)(vedtekter);
