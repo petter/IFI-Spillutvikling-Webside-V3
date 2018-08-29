@@ -25,4 +25,10 @@
 
 .NavLogo {
     height: 3em;
+    
 }
+
+.LogoLink {
+    border-bottom: 0;
+}
+

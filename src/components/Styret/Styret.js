@@ -1,34 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import classes from './Styret.css';
 
 const styret = (props) => {
 
-    const medlemmerData = [
-        {
-            name: "Sivert Schou Olsen",
-            image: "https://i.imgur.com/bSPVFxl.jpg",
-            role: "Leder",
-            email: "siverto@ifi.uio.no",
-        }, {
-            name: "Petter Sæther Moen",
-            image: "https://i.imgur.com/69X4Q4J.jpg",
-            role: "Nestleder",
-            email: "pettesm@ifi.uio.no",
-        }, {
-            name: "Nicolai Rønning",
-            image: "",
-            role: "PR-Ansvarlig",
-            email: "nicolr@ifi.uio.no",
-        }, {
-            name: "Vemund Justnes",
-            image: "https://i.imgur.com/qRQTVk5.jpg",
-            role: "Økonomiansvarlig",
-            email: "vemundju@ifi.uio.no",
-        }
-    ]
 
-    const medlemmer = medlemmerData.map((el, index) => {
+
+    const medlemmer = props.styremedlemmer.map((el, index) => {
         return (
             <div key={el.email} className={classes.Styremedlem}>
                 <div className={classes.StyremedlemImage} style={{ backgroundImage: "url(" + el.image + ")" }}></div>
@@ -49,4 +28,12 @@ const styret = (props) => {
     );
 };
 
-export default styret;
+const mapStateToProps = state => {
+    return {
+        styremedlemmer: state.styremedlemmer,
+    }
+}
+
+// const mapDispatchToProps = 
+
+export default connect(mapStateToProps)(styret);

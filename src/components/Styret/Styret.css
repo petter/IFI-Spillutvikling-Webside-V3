@@ -31,8 +31,13 @@
     width: 10em;
     background-size: 130%;
     border-radius: 50%;
-    background-position: center center;
+    background-position: center top;
     margin-bottom: 1em; 
+    transition: 300ms ease-in-out;
+}
+
+.Styremedlem:hover .StyremedlemImage {
+    background-position-y: center;
 }
 
 .StyremedlemTitle {

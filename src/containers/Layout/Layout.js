@@ -15,5 +15,8 @@ export default class Layout extends Component {
 }
 
 Layout.propTypes = {
-    children: PropTypes.object
+    children: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.array
+    ])
 }
