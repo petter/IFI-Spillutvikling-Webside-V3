@@ -23,7 +23,11 @@ class Toolbar extends PureComponent {
 
         // Only fade in toolbar on homepage
         if (this.isHome()) {
-            $('#toolbar').delay(300).fadeIn(1000);
+            $('#toolbar').css('display', 'none');
+            $('#toolbar').delay(500).fadeIn({
+                duration: 1000,
+                start: () => $("#toolbar").css('display', 'flex'),
+            });
         }
         window.onscroll = () => {
             if (this.isHome()) {
@@ -39,8 +43,7 @@ class Toolbar extends PureComponent {
     }
 
     render = () => {
-        // Don't display toolbar on homepage, it will fade in, will only run once.
-        let navBarStyle = { display: "none" };
+        let navBarStyle = {};
 
         // After first render bgColor will be set.
         if (this.state.bgColor !== '') {

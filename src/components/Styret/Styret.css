@@ -34,6 +34,7 @@
     background-position: center top;
     margin-bottom: 1em; 
     transition: 300ms ease-in-out;
+    
 }
 
 .Styremedlem:hover .StyremedlemImage {
@@ -54,4 +55,14 @@
 
 .StyremedlemEmail {
     margin: 0;
+}
+
+@keyframes bounceInUp {
+    0% {
+        background-position-y: top;
+    }
+
+    100% {
+        background-position-y: center;
+    }
 }
