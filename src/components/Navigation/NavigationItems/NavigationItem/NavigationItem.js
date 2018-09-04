@@ -6,16 +6,13 @@ import classes from './NavigationItem.css';
 
 const navigationItem = (props) => {
     return (
-        <NavLink className={classes.NavigationItem} activeClassName={classes.Active} to={props.to}>{props.children}</NavLink>
+        <NavLink className={classes.NavigationItem} activeClassName={classes.Active} to={props.to} exact>{props.children}</NavLink>
     );
 };
 
 navigationItem.propTypes = {
     to: PropTypes.string,
-    children: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.string
-    ]),
+    children: PropTypes.node,
 }
 
 export default navigationItem;

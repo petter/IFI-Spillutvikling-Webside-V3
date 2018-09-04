@@ -61,7 +61,6 @@ class Toolbar extends PureComponent {
             logoStyle = {};
         }
 
-        console.log(navBarStyle);
         return (
             <nav className={classes.Nav} id="toolbar" style={navBarStyle}>
                 <Link to="/" style={logoStyle} id="LogoLink" className={classes.LogoLink}>

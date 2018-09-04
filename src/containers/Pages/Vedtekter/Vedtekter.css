@@ -1,0 +1,44 @@
+.Vedtekter {
+
+}
+
+.VedtekterList {
+    list-style: none;
+}
+
+.VedtekterList.Level1 {
+    counter-reset: level1;
+    font-weight: bold;
+}
+
+.VedtekterList.Level2 {
+    counter-reset: level2;
+    font-weight: normal;
+}
+
+.VedtekterList.Level3 {
+    counter-reset: level3;
+}
+
+.VedtektItem::before {
+    padding-right: .5em;
+}
+
+.VedtektItem {
+    padding: .25em 0;
+}
+
+.VedtektItem.Level1::before {
+    counter-increment: level1;
+    content: '§' counter(level1, decimal) '.';
+}
+
+.VedtektItem.Level2::before {
+    counter-increment: level2;
+    content: counter(level1, decimal) '.' counter(level2, decimal);
+}
+
+.VedtektItem.Level3::before {
+    counter-increment: level3;
+content: counter(level1, decimal) '.' counter(level2, decimal) '.' counter(level3);
+}
