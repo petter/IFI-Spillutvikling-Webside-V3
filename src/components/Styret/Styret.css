@@ -1,15 +1,8 @@
 @value primary, secondary from '../../assets/css/colours.css';
-
-.Container {
-    padding: 1em 0;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-}
+@value breakpointTablet, breakpointTabletLarge, breakpointDesktop from '../../assets/css/structure.css';
 
 .StyremedlemWrapper {
-    width: 900px;
+    width: 100%;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -22,7 +15,7 @@
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    width: 20%;
+    width: 100%;
     margin-bottom: 2em;
 }
 
@@ -46,23 +39,30 @@
 }
 
 .StyremedlemName {
-    margin: 0;
+    font-size: 1rem;
 }
 
-.StyremedlemRole {
-    margin: 0;
-}
-
+.StyremedlemName,
+.StyremedlemRole,
 .StyremedlemEmail {
     margin: 0;
 }
 
-@keyframes bounceInUp {
-    0% {
-        background-position-y: top;
+@media (min-width: breakpointTablet) {
+    .Styremedlem {
+        width: 45%;
     }
+}
 
-    100% {
-        background-position-y: center;
+@media (min-width: breakpointTabletLarge) {
+    .Styremedlem {
+        width: 30%;
+    }
+}
+
+
+@media (min-width: breakpointDesktop) {
+    .Styremedlem {
+        width: 20%;
     }
 }

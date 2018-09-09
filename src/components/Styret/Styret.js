@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Container from '../UI/Container/Container';
 import classes from './Styret.css';
 
 const styret = (props) => {
@@ -19,12 +20,12 @@ const styret = (props) => {
     });
 
     return (
-        <div className={classes.Container}>
+        <Container>
             <h1 className={classes.StyremedlemTitle}>Styret</h1>
             <div className={classes.StyremedlemWrapper}>
                 {medlemmer}
             </div>
-        </div>
+        </Container>
     );
 };
 
