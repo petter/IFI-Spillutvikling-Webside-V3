@@ -5,16 +5,26 @@ import { Link } from 'react-router-dom';
 import classes from './Button.css';
 
 const button = (props) => {
-    return (
-        <Link className={classes.Button} to={props.href}>{props.children}</Link>
-    );
+    if (props.link) {
+        return (
+            <Link className={classes.Button} to={props.href} style={props.style}>{props.children}</Link>
+        );
+    } else {
+        return (
+            <button className={classes.Button} onClick={props.onClick} style={props.style}>{props.children}</button>
+        )
+    }
+
 };
 
 button.propTypes = {
+    onClick: PropTypes.func,
     to: PropTypes.string,
+    link: PropTypes.bool,
     children: PropTypes.oneOfType([
         PropTypes.object,
-        PropTypes.string
+        PropTypes.string,
+        PropTypes.node,
     ]),
 }
 

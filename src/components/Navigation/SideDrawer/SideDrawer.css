@@ -1,0 +1,48 @@
+@value sideDrawerWidth: 75vw;
+
+.SideDrawer {
+    position: fixed;
+    height: 100vh;
+    width: sideDrawerWidth;
+    background-color: white;
+    z-index: 200;
+    left: calc(0em - sideDrawerWidth);
+    top: 0;
+    bottom: 0;
+    transition: 300ms ease-in-out;
+}
+
+.SideDrawer.Open {
+    left: 0;
+}
+
+.SideDrawer .NavItems {
+    display: flex;
+    flex-flow: column;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+.SideDrawer .NavItem {
+    color: black;
+}
+
+.SideDrawer .NavItem:hover {
+    border-color: black;
+}
+
+.NavLogo {
+    width: 50%;
+}
+
+.LogoLink {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 0;
+    width: 100%;
+    align-self: center;
+    padding: 1em;
+    margin-top: 2em;
+    box-sizing: border-box;
+}

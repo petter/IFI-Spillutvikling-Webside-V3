@@ -1,0 +1,44 @@
+@value breakpointDesktop from '../../../../assets/css/structure.css';
+
+.HamburgerButton {
+    padding: .25em;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.HamburgerButton:hover,
+.HamburgerButton:active {
+    border: 0;
+}
+
+.HamburgerButton:hover {
+
+}
+
+.HamburgerButton:focus {
+    outline: none;
+}
+
+.HamburgerWrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 1.5em;
+    width: 2em;
+}
+
+.HamburgerBar {
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    border-radius: .1em;
+}
+
+@media (min-width: breakpointDesktop) {
+    .HamburgerButton {
+        display: none;
+    }
+}

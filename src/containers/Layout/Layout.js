@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import Navigation from '../../components/Navigation/Navigation';
 
 export default class Layout extends Component {
     render() {
         return (
             <div>
-                <Toolbar />
+                <Navigation />
                 {this.props.children}
             </div>
         );

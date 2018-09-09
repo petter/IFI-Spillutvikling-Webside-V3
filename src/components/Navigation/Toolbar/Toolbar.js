@@ -4,7 +4,9 @@ import $ from 'jquery';
 import Color from 'color';
 
 import NavigationItems from '../NavigationItems/NavigationItems';
+import HamburgerButton from '../../UI/IconButton/HamburgerButton/HamburgerButton';
 import logo from '../../../assets/img/IconWhite.svg';
+import { isDesktop } from '../../../assets/js/Utils';
 import classes from './Toolbar.css';
 
 class Toolbar extends PureComponent {
@@ -14,30 +16,44 @@ class Toolbar extends PureComponent {
         bgColor: '',
     }
 
-
-
     isHome = () => this.props.location.pathname === '/';
 
     componentDidMount = () => {
-        this.setState({ bgColor: $("#toolbar").css('backgroundColor') });
+        const calcOpacity = () => {
+            if (!this.isHome() && !isDesktop()) return 1;
+            // Opacity will start changing when closing bottom of jumbo.
+            const jumboBottomPos = $("#jumbotron").offset().top + $("#jumbotron").outerHeight();
+            let opacity = (window.scrollY - jumboBottomPos + 150 * 1.5) / 150;
+            opacity = Math.max(opacity, 0);
+            opacity = Math.min(opacity, 1);
+            return opacity;
+        }
+
+        this.setState({
+            bgColor: $("#toolbar").css('backgroundColor'),
+            logoOpacity: calcOpacity(),
+        });
 
         // Only fade in toolbar on homepage
-        if (this.isHome()) {
+        if (this.isHome() && isDesktop()) {
             $('#toolbar').css('display', 'none');
             $('#toolbar').delay(500).fadeIn({
                 duration: 1000,
                 start: () => $("#toolbar").css('display', 'flex'),
             });
         }
+
+
+
         window.onscroll = () => {
-            if (this.isHome()) {
-                // Opacity will start changing when closing bottom of jumbo.
-                const jumboBottomPos = $("#jumbotron").offset().top + $("#jumbotron").outerHeight();
-                let opacity = (window.scrollY - jumboBottomPos + 150 * 1.5) / 150;
-                opacity = Math.max(opacity, 0);
-                opacity = Math.min(opacity, 1);
-                this.setState({ logoOpacity: opacity });
+            if (this.isHome() && isDesktop()) {
+                this.setState({ logoOpacity: calcOpacity });
             }
+        }
+
+        window.onresize = () => {
+            if (this.isHome() && isDesktop()) this.setState({ logoOpacity: calcOpacity() })
+            else this.setState({ logoOpacity: 1 });
         }
 
     }
@@ -56,17 +72,18 @@ class Toolbar extends PureComponent {
             logoStyle = { ...logoStyle, display: "block" };
         }
 
-        if (!this.isHome()) {
+        if (!this.isHome() || !isDesktop()) {
             navBarStyle = {};
             logoStyle = {};
         }
 
         return (
             <nav className={classes.Nav} id="toolbar" style={navBarStyle}>
+                <HamburgerButton onClick={this.props.onSideDrawerOpen} />
                 <Link to="/" style={logoStyle} id="LogoLink" className={classes.LogoLink}>
                     <img src={logo} alt="IFI Spillutvikling logo" className={classes.NavLogo} />
                 </Link>
-                <NavigationItems />
+                <NavigationItems className={classes.NavItems} />
             </nav>
         );
     }

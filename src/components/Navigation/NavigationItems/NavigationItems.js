@@ -3,13 +3,15 @@ import React from 'react';
 import NavigationItem from './NavigationItem/NavigationItem';
 import classes from './NavigationItems.css';
 
-const navigationItems = () => {
+const navigationItems = (props) => {
+    const wrapperClasses = [classes.NavigationItems];
+    if (props.className) wrapperClasses.push(props.className);
     return (
-        <div className={classes.NavigationItems}>
-            <NavigationItem to="/">Hjem</NavigationItem>
-            <NavigationItem to="/vedtekter">Vedtekter</NavigationItem>
-            <NavigationItem to="/ressurser">Ressurser</NavigationItem>
-            <NavigationItem to="/blimedlem">Bli medlem</NavigationItem>
+        <div className={wrapperClasses.join(' ')}>
+            <NavigationItem onClick={props.onClick} className={props.navItemClassName} to="/">Hjem</NavigationItem>
+            <NavigationItem onClick={props.onClick} className={props.navItemClassName} to="/vedtekter">Vedtekter</NavigationItem>
+            <NavigationItem onClick={props.onClick} className={props.navItemClassName} to="/ressurser">Ressurser</NavigationItem>
+            <NavigationItem onClick={props.onClick} className={props.navItemClassName} to="/blimedlem">Bli medlem</NavigationItem>
         </div>
     );
 };
