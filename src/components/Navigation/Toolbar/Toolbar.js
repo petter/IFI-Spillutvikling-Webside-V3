@@ -20,7 +20,7 @@ class Toolbar extends PureComponent {
 
     componentDidMount = () => {
         const calcOpacity = () => {
-            if (!this.isHome() && !isDesktop()) return 1;
+            if (!(this.isHome() && isDesktop())) return 1;
             // Opacity will start changing when closing bottom of jumbo.
             const jumboBottomPos = $("#jumbotron").offset().top + $("#jumbotron").outerHeight();
             let opacity = (window.scrollY - jumboBottomPos + 150 * 1.5) / 150;
