@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import NavigationItem from './NavigationItem/NavigationItem';
 import classes from './NavigationItems.css';
@@ -15,5 +16,11 @@ const navigationItems = (props) => {
         </div>
     );
 };
+
+navigationItems.propTypes = {
+    className: PropTypes.string,
+    navItemClassName: PropTypes.string,
+    onClick: PropTypes.func,
+}
 
 export default navigationItems;

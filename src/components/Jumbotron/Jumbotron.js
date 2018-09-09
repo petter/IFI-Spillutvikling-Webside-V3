@@ -2,7 +2,6 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 
 import Button from '../UI/Button/Button';
-import logo from '../../assets/img/IconWhite.svg';
 import classes from './Jumbotron.css';
 
 const jumbotron = (props) => {
@@ -10,7 +9,6 @@ const jumbotron = (props) => {
         <div className={classes.Jumbotron} id="jumbotron">
             <div className={classes.JumbotronContent}>
                 <h2 className={classes.JumbotronTitle}>IFI Spillutvikling</h2>
-                {/* <img className={classes.JumbotronLogo} src={logo} alt="IFI Spillutvikling logo" /> */}
                 <p className={classes.JumbotronBody}>IFI Spillutvikling er en forening ved Institutt for Informatikk, Universitetet i Oslo for alle studenter som har et ønske om, eller en interesse for, å utvikle spill, uansett erfaring.</p>
                 <Button link href="/blimedlem">Bli medlem</Button>
             </div>

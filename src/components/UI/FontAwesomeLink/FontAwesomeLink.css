@@ -1,0 +1,25 @@
+@value secondary from '../../../assets/css/colours.css';
+
+.Link {
+    border: 0;
+}
+
+.Icon {
+    height: 100%;
+    width: 100%;
+    margin: 0 .25em;
+}
+
+.Icon path {
+    height: 100%;
+}
+
+.Icon path {
+    transition: 150ms ease-in-out;
+    /* fill: rgba(255, 255, 255, .75); */
+    fill: white;
+}
+
+.Icon:hover path {
+    fill: secondary;
+}

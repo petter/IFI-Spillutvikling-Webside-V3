@@ -15,6 +15,8 @@ const navigationItem = (props) => {
 
 navigationItem.propTypes = {
     to: PropTypes.string,
+    className: PropTypes.string,
+    onClick: PropTypes.func,
     children: PropTypes.node,
 }
 

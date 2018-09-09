@@ -1,0 +1,22 @@
+@value primary, secondary from '../../assets/css/colours.css';
+
+.Container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.Footer {
+    padding: .5em 0;
+    background-color: primary;
+    border-top: 1em solid secondary;
+}
+
+.SocialLinks {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    height: 3em;
+}
