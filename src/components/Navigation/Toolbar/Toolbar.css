@@ -1,5 +1,5 @@
 @value primary from '../../../assets/css/colours.css';
-@value navHeight, breakpointTablet, breakpointDesktop from '../../../assets/css/structure.css';
+@value navHeight, navHeightMobile, breakpointTablet, breakpointDesktop from '../../../assets/css/structure.css';
 
 .Nav {
     background-color: primary;
@@ -27,8 +27,7 @@
 }
 
 .NavLogo {
-    height: 3em;
-    
+    height: 3em;  
 }
 
 .LogoLink {
@@ -39,6 +38,12 @@
 .NavItems {
     display: none;
 }
+/* 
+@media (min-width: breakpointTablet) {
+    .Nav {
+        height: navHeight;
+    }
+} */
 
 @media (min-width: breakpointDesktop) {
     .NavItems {

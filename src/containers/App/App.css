@@ -1,5 +1,5 @@
 @value secondary from '../../assets/css/colours.css';
-@value navHeight from '../../assets/css/structure.css';
+@value navHeight, navHeightMobile, breakpointTablet from '../../assets/css/structure.css';
 
 @font-face {
   font-family: 'Bebas Neue';
@@ -12,6 +12,12 @@
 body {
   margin-top: navHeight;
 }
+/* 
+@media (min-width: breakpointTablet) {
+  body {
+    margin-top: navHeight;
+  }
+} */
 
 ::selection {
   background: secondary;

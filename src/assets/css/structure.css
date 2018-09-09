@@ -1,4 +1,6 @@
 @value navHeight: 5em;
+@value navHeightMobile: 3em;
 @value breakpointTablet: 425px;
 @value breakpointTabletLarge: 668px;
 @value breakpointDesktop: 1024px;
+

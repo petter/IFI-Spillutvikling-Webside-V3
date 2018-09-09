@@ -1,4 +1,4 @@
-@value breakpointDesktop from '../../../../assets/css/structure.css';
+@value breakpointTablet, breakpointDesktop from '../../../../assets/css/structure.css';
 
 .HamburgerButton {
     padding: .25em;
@@ -36,6 +36,13 @@
     background-color: white;
     border-radius: .1em;
 }
+/* 
+@media (min-width: breakpointTablet) {
+    .HamburgerWrapper {
+        height: 1.5em;
+        width: 2em;
+    }
+} */
 
 @media (min-width: breakpointDesktop) {
     .HamburgerButton {

@@ -1,29 +1,58 @@
 @value primary from '../../assets/css/colours.css';
-@value navHeight from '../../assets/css/structure.css';
+@value breakpointTablet, breakpointTabletLarge, breakpointDesktop, navHeight, navHeightMobile from '../../assets/css/structure.css';
 
 .Jumbotron {
     background-color: primary;
-    height: 50em;
+    height: 35em;
     color: white;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 5em;
+    padding: 2em;
     margin-top: calc(0em - navHeight);
 }
 
 .JumbotronContent {
-    width: 50%;
+    width: 100%;
 }
 
 .JumbotronTitle {
     font-family: 'Bebas Neue';
     letter-spacing: 3px;
-    font-size: 5em;
+    font-size: 2em;
     margin: 0;
+    display: initial;
 }
 
 .JumbotronBody {
     margin-bottom: 2em;
+}
+
+@media (min-width: breakpointTablet) {
+    .Jumbotron { 
+        height: 50em;
+        /* margin-top: calc(0em - navHeight); */
+    }
+
+    .JumbotronTitle {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: breakpointTabletLarge) {
+    .JumbotronTitle {
+        font-size: 4em;
+    }
+    
+}
+
+@media (min-width: breakpointDesktop) {
+    .Jumbotron { 
+        padding: 2em 5em;
+    }
+
+    .JumbotronContent {
+        width: 50%;
+    }
 }
