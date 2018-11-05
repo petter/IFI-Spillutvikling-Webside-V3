@@ -30,11 +30,16 @@
     font-size: 3vh;
 }
 
+._404Link {
+    transition: border-bottom-width 150ms ease-in-out
+}
+
 ._404Link,
 ._404Link:link,
 ._404Link:visited,
 ._404Link:active {
     color: secondary;
+    
 }
 
 ._404Link:hover {

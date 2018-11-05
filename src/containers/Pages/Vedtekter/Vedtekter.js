@@ -9,7 +9,7 @@ const vedtekter = (props) => {
     const vedtekter = objToVedtekter(props.vedtekter, classNames);
     return (
         <Container>
-            <h1>Vedtekter</h1>
+            <h1 className={classes.VedtekterTitle}>Vedtekter</h1>
             {vedtekter}
         </Container>
     );

@@ -11,9 +11,9 @@ const fontAwesomeLink = (props) => {
     if (props.className) linkClass.push(props.className);
     if (props.iconClassName) iconClass.push(props.iconClassName);
     return (
-        <Link to={props.to} className={linkClass.join(' ')}>
+        <a href={props.to} className={linkClass.join(' ')}>
             <FontAwesomeIcon icon={props.icon} size={props.size ? props.size : "3x"} className={iconClass.join(' ')} transform={props.transform} />
-        </Link>
+        </a>
     );
 };
 

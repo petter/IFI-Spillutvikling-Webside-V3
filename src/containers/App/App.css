@@ -31,7 +31,11 @@ a {
   color: black;
   text-decoration: none;
   border-bottom: 1px solid secondary;
-  transition: 150ms ease-in-out;
+  transition: border-bottom-color 150ms ease-in-out;
+}
+
+a:hover {
+  border-bottom-color: secondary;
 }
 
 a:visited,

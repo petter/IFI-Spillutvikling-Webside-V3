@@ -10,7 +10,7 @@
     background-color: secondary;
     color: primary;
     text-decoration: none;
-    transition: 150ms ease-in-out;
+    transition: padding 150ms ease-in-out, margin 150ms ease-in-out;
     cursor: pointer;
 }
 
@@ -26,6 +26,6 @@
 
 .Button:active,
 .Button:hover {
-    padding: 1.1em 2.1em;
-    margin: -0.1em;
+    padding: 1.2em 2.2em;
+    margin: -0.2em;
 }

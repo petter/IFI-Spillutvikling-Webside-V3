@@ -11,6 +11,7 @@ const footer = (props) => {
                 <div className={classes.SocialLinks}>
                     <FontAwesomeLink to="https://discord.gg/cSTfD6h" icon={faDiscord} transform="down-1" />
                     <FontAwesomeLink to="https://www.facebook.com/ifispillutvikling/" icon={faFacebook} />
+                    <FontAwesomeLink to="https://github.com/pettersmoen/IFI-Spillutvikling-Webside-V3" icon={faGithub} />
                 </div>
             </Container>
         </footer>

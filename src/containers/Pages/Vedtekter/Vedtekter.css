@@ -1,5 +1,12 @@
+@value primary from '../../../assets/css/colours.css';
+
 .Vedtekter {
 
+}
+
+.VedtekterTitle,
+.VedtekterList.Level1 {
+    color: primary;
 }
 
 .VedtekterList {
